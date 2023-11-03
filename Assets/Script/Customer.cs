@@ -5,7 +5,7 @@ using UnityEngine;
 public class Customer : MonoBehaviour
 {
     public int payment;
-
+    public int id;
     public bool isHappy;
     public bool isAngry;
 
@@ -17,9 +17,10 @@ public class Customer : MonoBehaviour
     private void Awake()
     {
         Debug.Log("»ý¼º");
+        id = 2;
         payment = Random.RandomRange(100, 1000);
         animator = GetComponent<Animator>();
-        Enter();
+        TextManager.textmanager.trigger = true;
     }
 
     private void Update()

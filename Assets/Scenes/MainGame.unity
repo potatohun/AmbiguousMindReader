@@ -514,7 +514,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 993774564}
-  time: 20
+  time: 40
   timeout: 0
   fadeImage: {fileID: 20358579}
   fadeDuration: 1
@@ -544,6 +544,7 @@ GameObject:
   - component: {fileID: 376839898}
   - component: {fileID: 376839900}
   - component: {fileID: 376839899}
+  - component: {fileID: 376839901}
   m_Layer: 5
   m_Name: Text (Legacy)
   m_TagString: Untagged
@@ -604,8 +605,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uB098\uC640 \uB0B4 \uD30C\uD2B8\uB108 \uC0AC\uC774\uC758 OO\uAC00 \uC5B4\uB5BB\uAC8C
-    \uBC1C\uC804\uD560 \uAC83\uC778\uAC00\uC694"
+  m_Text: 
 --- !u!222 &376839900
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -614,6 +614,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 376839897}
   m_CullTransparentMesh: 1
+--- !u!114 &376839901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376839897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd932868b5161244fb8e178ef4ce8a7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  str: []
 --- !u!1 &513109719
 GameObject:
   m_ObjectHideFlags: 0
@@ -1076,6 +1089,8 @@ MonoBehaviour:
   - {fileID: 1740297573}
   - {fileID: 1639872338}
   customer: {fileID: 0}
+  left: {fileID: 376839901}
+  leftText: 
 --- !u!4 &1602328265
 Transform:
   m_ObjectHideFlags: 0

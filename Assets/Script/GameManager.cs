@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -31,7 +32,6 @@ public class GameManager : MonoBehaviour
     {
         StartCoroutine(FadeIn());
         timeout = false;
-        time = 10.0f+2;
     }
 
     // Update is called once per frame
@@ -47,6 +47,7 @@ public class GameManager : MonoBehaviour
             Debug.Log("타임오버!");
             StartCoroutine(FadeOut());
             //데이터 저장 후 씬 이동
+            //SceneManager.LoadScene("Shop");
         }
         else
         {
