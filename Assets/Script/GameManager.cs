@@ -4,6 +4,7 @@ using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class GameManager : MonoBehaviour
 {
@@ -54,6 +55,7 @@ public class GameManager : MonoBehaviour
         StartCoroutine(FadeIn());
         timeout = true;
         rage_day = false;
+
         //30프로 확률로 레이지 데이 ON
         if (Random.value < rage_day_percent)
         {
@@ -74,6 +76,11 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 1f;
             background.color = new Color(255, 255, 255, 255);
         }
+
+        //아이템 사용여부 변경
+        time_item_use = System.Convert.ToBoolean(PlayerPrefs.GetInt("조명"));
+        customer_item_use = System.Convert.ToBoolean(PlayerPrefs.GetInt("의자"));
+        power_item_use = System.Convert.ToBoolean(PlayerPrefs.GetInt("독심술 서적"));
         if (time_item_use)
         {
             //매장 운영시간 증가

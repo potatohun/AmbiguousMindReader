@@ -12,6 +12,7 @@ public class TextManager : MonoBehaviour
     public Button[] button;
     public GameObject[] buttonText;
 
+    public string[] str = new string[3];
     public bool trigger = true;
 
     public Customer customer;
@@ -96,7 +97,7 @@ public class TextManager : MonoBehaviour
         for (int i = 0; i < 3; i++)
         {
 
-            string text = button[i].GetComponentInChildren<Text>().text;
+            string text = str[i];
             button[i].GetComponentInChildren<Text>().text = i + 1 + ". ";
 
             while (count != text.Length)
@@ -112,7 +113,8 @@ public class TextManager : MonoBehaviour
             count = 0;
         }
 
-    }
+        right.SetDingdangdong()
+; ;    }
 
     void TransString(string text)
     {

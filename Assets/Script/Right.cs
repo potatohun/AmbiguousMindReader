@@ -10,7 +10,7 @@ public class Right : MonoBehaviour
     public Dictionary<int, string[]> dic = new Dictionary<int, string[]>();
     public string[] str;
 
-
+    String dingdangdong = "";
     int random = 0;
     public int[] check = { 0, 0, 0 };
 
@@ -26,26 +26,6 @@ public class Right : MonoBehaviour
         dic.Add(3, scr3);
     }
 
-   /* public string GetSCr(int i)
-    {
-        HashSet<int> set = new HashSet<int>();
-
-        if (dic.TryGetValue(i, out str))
-        {
-
-            while (check[random] == 1)
-                random = UnityEngine.Random.Range(1, 4);
-
-            check[random] = 1;
-
-            return str[random + 1];
-        }
-        else
-            return null;
-
-    }
-   */
-
     public void SetCheck()
     {
         for (int i = 0; i < 3; i++)
@@ -54,12 +34,11 @@ public class Right : MonoBehaviour
    
     public void SetBtn()
     {
-        String dingdongdang="";
+        
 
         if (dic.TryGetValue(TextManager.textmanager.customer.id, out str))
         {
-            dingdongdang = str[int.Parse(str[0])];
-            Debug.Log(dingdongdang); // 왜 지맘대로안하고지랄
+            dingdangdong = str[int.Parse(str[0])];
 
             for (int i = 0; i < 3; i++)
             {
@@ -79,17 +58,15 @@ public class Right : MonoBehaviour
                 check[random - 1] = 1;
 
                 TextManager.textmanager.button[i].tag = "False";
-                TextManager.textmanager.button[i].GetComponentInChildren<Text>().text = str[random];
-            }
-
-            for (int i = 0; i < 3; i++)
-            {
-             
-                if (TextManager.textmanager.button[i].GetComponentInChildren<Text>().text.Equals(dingdongdang))//매니저에 스트링만들어서 더 깔끔하게할수있을거같은데
-                    TextManager.textmanager.button[i].tag = "True";
-
+                TextManager.textmanager.str[i] = str[random];
             }
         }
 
+    }
+    public void SetDingdangdong()
+    {
+        for (int i = 0; i < 3; i++)
+            if (dingdangdong.Equals(TextManager.textmanager.button[i].GetComponentInChildren<Text>().text.Substring(3)))
+                TextManager.textmanager.button[i].tag = "True";
     }
 }

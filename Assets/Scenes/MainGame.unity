@@ -554,7 +554,7 @@ MonoBehaviour:
   customerspawner: {fileID: 1832814844}
   timer_text: {fileID: 993774564}
   earn_text: {fileID: 485741318}
-  time: 30
+  time: 10
   timeout: 0
   fadeImage: {fileID: 20358579}
   fadetext: {fileID: 1556021731}
@@ -1533,6 +1533,10 @@ MonoBehaviour:
   - {fileID: 1956189521}
   - {fileID: 1780598579}
   - {fileID: 982852777}
+  str:
+  - 
+  - 
+  - 
   trigger: 1
   customer: {fileID: 0}
   customerSpawner: {fileID: 1832814844}

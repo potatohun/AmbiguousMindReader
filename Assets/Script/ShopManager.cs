@@ -43,28 +43,6 @@ public class ShopManager : MonoBehaviour
         textaudio = textSound.GetComponent<AudioSource>();
     }
 
-    public void SetProduct()
-    {
-        /*GameObject IMSI = Instantiate(shop);
-        IMSI.transform.parent = this.transform;//
-        Transform itemName = IMSI.transform.GetChild(1);*/
-
-
-        /*int randomIndex;
-
-        for (int i = 0; i < 3; i++)
-        {
-            randomIndex = Random.Range(0, 4);
-            if (!showCase.Contains(shopList[randomIndex]))
-            {
-                showCase.Add(shopList[randomIndex]);
-                continue;
-            }
-            i--;
-        }*/
-
-    }
-
     public void OnButtonClicked(int price)
     {
         receiptText.num3 += price;
