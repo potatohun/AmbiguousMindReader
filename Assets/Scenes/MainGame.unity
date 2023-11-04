@@ -554,7 +554,7 @@ MonoBehaviour:
   customerspawner: {fileID: 1832814844}
   timer_text: {fileID: 993774564}
   earn_text: {fileID: 485741318}
-  time: 10
+  time: 30
   timeout: 0
   fadeImage: {fileID: 20358579}
   fadetext: {fileID: 1556021731}

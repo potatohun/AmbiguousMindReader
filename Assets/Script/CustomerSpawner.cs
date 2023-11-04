@@ -15,13 +15,13 @@ public class CustomerSpawner : MonoBehaviour
     public Sprite[] veryangry_facelist;
     public Image face;
 
+
     private void Start()
     {
         // 주기적으로 프리팹을 생성하기 위한 타이머 시작
         canvasTransform = GameObject.Find("Canvas").transform;
         InvokeRepeating("SpawnPrefab", 0.0f, spawnInterval);
     }
-
     // 프리팹을 생성하는 함수
     void SpawnPrefab()
     {
@@ -41,6 +41,7 @@ public class CustomerSpawner : MonoBehaviour
         customer = GameObject.FindWithTag("Customer").GetComponent<Customer>();
         face = GameObject.FindWithTag("Face").GetComponent<Image>();
         face.sprite = normal_facelist[Random.Range(0, normal_facelist.Length)];
+        customer.id = Random.Range(1, 4);
         TextManager.textmanager.FindCustomer(customer);
     }
 
@@ -57,5 +58,13 @@ public class CustomerSpawner : MonoBehaviour
     public void CustomerHappy()
     {
         face.sprite = happy_facelist[Random.Range(0, happy_facelist.Length)];
+    }
+
+    public void TimeOut()
+    {
+        GameManager.gamemanager.BadEffect();
+        GameManager.gamemanager.customerspawner.CustomerAngry();
+        customer.isAngry = true;
+        customer.Leave();
     }
 }

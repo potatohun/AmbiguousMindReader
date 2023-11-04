@@ -68,7 +68,7 @@ public class GameManager : MonoBehaviour
 
         if (rage_day)
         {//레이지 데이
-            Time.timeScale = 3f;
+            Time.timeScale = 2f;
             background.color = new Color(255, 0, 0, 255);
         }
         else

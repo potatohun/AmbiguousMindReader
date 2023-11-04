@@ -10,9 +10,11 @@ public class Customer : MonoBehaviour
     public int id;
     public bool isHappy;
     public bool isAngry;
+    public float lifetime;
 
     public bool isEnter;
     public bool isLeave;
+    public bool lifetime_over;
 
     public Animator animator;
     public Image image;
@@ -31,7 +33,7 @@ public class Customer : MonoBehaviour
 
     private void Update()
     {
-        if(GameManager.gamemanager.timeout == true)
+        if (GameManager.gamemanager.timeout == true)
         {
             Destroy();
         }
@@ -42,6 +44,7 @@ public class Customer : MonoBehaviour
         //손님 입장
         isEnter = true;
         isLeave = false;
+        Invoke("TimeOut", 5.0f);
     }
     public void Leave()
     {
@@ -73,5 +76,13 @@ public class Customer : MonoBehaviour
     {
         Debug.Log("삭제");
         Destroy(this.gameObject);
+    }
+
+    public void TimeOut()
+    {
+        GameManager.gamemanager.BadEffect();
+        GameManager.gamemanager.customerspawner.CustomerAngry();
+        isAngry = true;
+        Leave();
     }
 }
