@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Customer
   - Face
+  - True
+  - False
   layers:
   - Default
   - TransparentFX

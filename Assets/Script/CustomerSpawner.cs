@@ -43,4 +43,19 @@ public class CustomerSpawner : MonoBehaviour
         face.sprite = normal_facelist[Random.Range(0, normal_facelist.Length)];
         TextManager.textmanager.FindCustomer(customer);
     }
+
+    public void CustomerAngry()
+    {
+        face.sprite = angry_facelist[Random.Range(0, angry_facelist.Length)];
+    }
+
+    public void CustomerVeryangry()
+    {
+        face.sprite = veryangry_facelist[Random.Range(0, veryangry_facelist.Length)];
+    }
+
+    public void CustomerHappy()
+    {
+        face.sprite = happy_facelist[Random.Range(0, happy_facelist.Length)];
+    }
 }

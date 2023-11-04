@@ -21,19 +21,19 @@ public class Customer : MonoBehaviour
     {
         Debug.Log("생성");
         id = 2;
-        payment = Random.RandomRange(100, 1000);
+        payment = Random.RandomRange(100, 1001);
         animator = GetComponent<Animator>();
         image = GetComponent<Image>();
-
+        animator.SetInteger("EnterType", Random.RandomRange(0, 4));
+        Debug.Log(animator.GetInteger("EnterType"));
         TextManager.textmanager.trigger = true;
     }
 
     private void Update()
     {
         if(GameManager.gamemanager.timeout == true)
-        { 
-            //타임아웃시 퇴장(임시) ->
-            //Leave();
+        {
+            Destroy();
         }
     }
 

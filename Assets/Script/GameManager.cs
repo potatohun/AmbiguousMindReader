@@ -25,6 +25,10 @@ public class GameManager : MonoBehaviour
     public GameObject good;
     public GameObject bad;
 
+    public Image background;
+    public bool rage_day;
+    public float rage_day_percent;
+
     public bool time_item_use;
     public bool customer_item_use;
     public bool power_item_use;
@@ -44,9 +48,28 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         StartCoroutine(FadeIn());
-        timeout = false;
+        timeout = true;
+        rage_day = false;
+        //30프로 확률로 레이지 데이 ON
+        if (Random.value < rage_day_percent)
+        {
+            rage_day = true;
+        }
+        else
+        {
+            rage_day=false;
+        }
 
-
+        if (rage_day)
+        {//레이지 데이
+            Time.timeScale = 3f;
+            background.color = new Color(255, 0, 0, 255);
+        }
+        else
+        {//평시
+            Time.timeScale = 1f;
+            background.color = new Color(255, 255, 255, 255);
+        }
         if (time_item_use)
         {
             //매장 운영시간 증가
@@ -79,7 +102,10 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            time -= Time.deltaTime;
+            if(timeout == false)
+            {
+                time -= Time.deltaTime;
+            }
         }
     }
     // 화면을 페이드 인하는 Coroutine
@@ -103,12 +129,15 @@ public class GameManager : MonoBehaviour
             yield return null;
         }
 
+        timeout = false;
         fadeImage.gameObject.SetActive(false);
     }
 
     // 화면을 페이드 아웃하는 Coroutine
     IEnumerator FadeOut()
     {
+        Time.timeScale = 1f;
+        rage_day = false;
         fadetext.text = PlayerPrefs.GetInt("Day").ToString() + "일차 종료";
         //수입 초기화(임시) 남은 돈도 추가해 줘야함
         //
@@ -145,7 +174,7 @@ public class GameManager : MonoBehaviour
 
     public void Customer_itemuse()
     {
-        customerspawner.spawnInterval /= 2;
+        customerspawner.spawnInterval /= 2f;
     }
 
     public void Power_itemuse()

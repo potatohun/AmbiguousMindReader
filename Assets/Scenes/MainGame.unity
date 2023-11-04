@@ -251,7 +251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -288,6 +288,8 @@ GameObject:
   - component: {fileID: 120976484}
   - component: {fileID: 120976483}
   - component: {fileID: 120976482}
+  - component: {fileID: 120976485}
+  - component: {fileID: 120976486}
   m_Layer: 5
   m_Name: RightTextBox
   m_TagString: Untagged
@@ -315,7 +317,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -499.99994}
   m_SizeDelta: {x: 960, y: 0}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &120976482
@@ -380,6 +382,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 120976480}
   m_CullTransparentMesh: 1
+--- !u!95 &120976485
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120976480}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c818ddf585ac3be40a536e5f8d639c34, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &120976486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120976480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5f144988b9250442a5683b18944346f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  str: []
+  check: 000000000000000000000000
 --- !u!1 &187341669
 GameObject:
   m_ObjectHideFlags: 0
@@ -524,8 +561,11 @@ MonoBehaviour:
   fadeDuration: 2
   earn: 0
   particle_transform: {fileID: 1254858894}
-  good: {fileID: 4636258410766746743, guid: 3f6b81a3d5bfecc47a89d6b631aef1dc, type: 3}
-  bad: {fileID: 5727653373741981134, guid: be97b9f9a7e7951488aeb51ec144b7f6, type: 3}
+  good: {fileID: 100004, guid: 3af6f68141914ca43ba39b2403757bd0, type: 3}
+  bad: {fileID: 100006, guid: bcaff8fc36e95584bb27cc3cf7c6cb14, type: 3}
+  background: {fileID: 35590556}
+  rage_day: 0
+  rage_day_percent: 0.2
   time_item_use: 0
   customer_item_use: 0
   power_item_use: 0
@@ -713,7 +753,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd932868b5161244fb8e178ef4ce8a7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  str: []
+  str: 
 --- !u!1 &485741316
 GameObject:
   m_ObjectHideFlags: 0
@@ -1057,7 +1097,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "3. \uC870\uC5B8 \uC1B0\uB77C \uC1B0\uB791 \uC1B0\uB77C"
+  m_Text: 
 --- !u!222 &982852780
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1158,6 +1198,7 @@ GameObject:
   - component: {fileID: 1189274954}
   - component: {fileID: 1189274956}
   - component: {fileID: 1189274955}
+  - component: {fileID: 1189274957}
   m_Layer: 5
   m_Name: LeftTextBox
   m_TagString: Untagged
@@ -1183,7 +1224,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.00012207031, y: -500}
   m_SizeDelta: {x: 960, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1189274955
@@ -1224,6 +1265,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1189274953}
   m_CullTransparentMesh: 1
+--- !u!95 &1189274957
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189274953}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a4aaeb0ba81690f48a6096fd00d5ae1e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1254858893
 GameObject:
   m_ObjectHideFlags: 0
@@ -1467,10 +1529,18 @@ MonoBehaviour:
   - {fileID: 1720707175}
   - {fileID: 1740297573}
   - {fileID: 1639872338}
+  buttonText:
+  - {fileID: 1956189521}
+  - {fileID: 1780598579}
+  - {fileID: 982852777}
   trigger: 1
   customer: {fileID: 0}
+  customerSpawner: {fileID: 1832814844}
   left: {fileID: 376839901}
+  right: {fileID: 120976486}
   leftText: 
+  rightText: 
+  hole: 3
 --- !u!4 &1602328265
 Transform:
   m_ObjectHideFlags: 0
@@ -1632,6 +1702,7 @@ GameObject:
   - component: {fileID: 1654031994}
   - component: {fileID: 1654031993}
   - component: {fileID: 1654031996}
+  - component: {fileID: 1654031997}
   m_Layer: 5
   m_Name: TimerBackground
   m_TagString: Untagged
@@ -1659,7 +1730,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1169.6696, y: 0.000061035156}
+  m_AnchoredPosition: {x: 1169.7, y: 143.46997}
   m_SizeDelta: {x: 750.3363, y: 143.4671}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1654031993
@@ -1752,6 +1823,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1654031997
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654031991}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 86249b2606979154380dc1360f1be08a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1720707173
 GameObject:
   m_ObjectHideFlags: 0
@@ -1839,18 +1931,6 @@ MonoBehaviour:
       - m_Target: {fileID: 1602328264}
         m_TargetAssemblyTypeName: TextManager, Assembly-CSharp
         m_MethodName: ButtonClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 187865850}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: GoodEffect
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1994,18 +2074,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 187865850}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: BadEffect
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1740297574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2115,7 +2183,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "2. \uC870\uC5B8 \uC1B0\uB77C \uC1B0\uB791 \uC1B0\uB77C"
+  m_Text: 
 --- !u!222 &1780598582
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2271,7 +2339,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "1. \uC870\uC5B8 \uC1B0\uB77C \uC1B0\uB791 \uC1B0\uB77C"
+  m_Text: 
 --- !u!222 &1956189524
 CanvasRenderer:
   m_ObjectHideFlags: 0
