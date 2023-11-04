@@ -9,10 +9,16 @@ public class ImageFill : MonoBehaviour
     public float delayFirst;
     public float delay;
 
+    // (+) 코드추가
+    [SerializeField]
+    GameObject sign;
+    private Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
         image = GetComponent<Image>();
+        animator = sign.GetComponent<Animator>();
         StartCoroutine(fillLeftToRight(delayFirst, delay));
     }
 
@@ -25,9 +31,18 @@ public class ImageFill : MonoBehaviour
         {
             image.fillAmount = tmp;
             tmp += 3 * Time.deltaTime;
-            Debug.Log(tmp);
 
             yield return new WaitForSeconds(delay);
+        }
+        tmp = 1;
+    }
+
+    // (+) Animation 조건 추가
+    void Update()
+    {
+        if(image.fillAmount > 0.9 && this.transform.name == "barcode")
+        {
+            animator.SetFloat("FillValue", 1.0f);
         }
     }
 }

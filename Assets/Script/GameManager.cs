@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     public float fadeDuration = 3.0f; // 페이드 인/아웃 지속 시간
 
     public int earn;
+    private int profit;
 
     public Transform particle_transform;
     public GameObject good;
@@ -47,6 +48,9 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        profit = 0;
+        earn = PlayerPrefs.GetInt("Earn");
+        earn_text.text = PlayerPrefs.GetInt("Earn").ToString();
         StartCoroutine(FadeIn());
         timeout = true;
         rage_day = false;
@@ -157,6 +161,9 @@ public class GameManager : MonoBehaviour
             fadetext.color = textcolor;
             yield return null;
         }
+        PlayerPrefs.SetInt("PrevBalance", earn - profit); //원금
+        PlayerPrefs.SetInt("Profit", profit); //수익 (비용은 항상 0)
+        PlayerPrefs.SetInt("Earn", earn);
         PlayerPrefs.SetInt("Day", PlayerPrefs.GetInt("Day") + 1);
         SceneManager.LoadScene("Shop");
     }
@@ -191,5 +198,9 @@ public class GameManager : MonoBehaviour
     {
         GameObject particlesys = Instantiate(bad, particle_transform.position, Quaternion.identity);
         particlesys.GetComponent<ParticleSystem>().Play();
+    }
+    public void AddProfit(int pay) //수입 증가
+    {
+        profit += pay;
     }
 }

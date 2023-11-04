@@ -53,16 +53,19 @@ public class Customer : MonoBehaviour
         {
             GameManager.gamemanager.SetEarn(2 * payment);
             Debug.Log(2*payment + "¹ú¾ú´Ù!");
+            GameManager.gamemanager.AddProfit(2 * payment);
         }
         else if (isAngry)
         {
             GameManager.gamemanager.SetEarn(-1 * payment);
             Debug.Log(payment + "ÀÒ¾ú´Ù!");
+            GameManager.gamemanager.AddProfit(-1 * payment);
         }
         else
         {
             GameManager.gamemanager.SetEarn(payment);
             Debug.Log(payment + "¹ú¾ú´Ù!");
+            GameManager.gamemanager.AddProfit(payment);
         }
     }
 

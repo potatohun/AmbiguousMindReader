@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ReceiptText : MonoBehaviour
@@ -9,18 +10,6 @@ public class ReceiptText : MonoBehaviour
     public Text profit;
     public Text cost;
     public Text totalBalance;
-    
-    //test
-    int numPB = 1000; //String으로 바꿀지 고민 해보기
-    int numP = 2000;
-    int numC = 3000;
-    int numTB = 4000;
-
-    /*
-    int numPB = PlayerPrefs.GetInt(""); //String으로 바꿀지 고민 해보기
-    int numP = PlayerPrefs.GetInt("");
-    int numC = PlayerPrefs.GetInt("");
-    int numTB = PlayerPrefs.GetInt(""); */
 
     private List<string> textList;
     public List<Text> targetTextList;
@@ -29,26 +18,42 @@ public class ReceiptText : MonoBehaviour
     public GameObject receiptAudio;
     private AudioSource audioSource;
 
+    int num1;
+    int num2;
+    public int num3;
+    int num4;
+
     // Start is called before the first frame update
     void Start()
     {
-        //numTB = numPB + numP - numC;
-        prevBalance.text = numPB.ToString();
-        profit.text = numP.ToString();
-        cost.text = numC.ToString();
-        totalBalance.text = numTB.ToString();
+        num1 = PlayerPrefs.GetInt("PrevBalance");
+        num2 = PlayerPrefs.GetInt("Profit");
+        num3 = 0;
+        num4 = PlayerPrefs.GetInt("Earn");
+        setReceiptBalance(); // main 씬에서 돈 데이터 받아오기
 
         textList = new List<string>();
         for (int i = 0; i < targetTextList.Count; i++)
         {
             textList.Add(targetTextList[i].text.ToString());
-            Debug.Log(textList[i]);
+            //Debug.Log(textList[i]);
             targetTextList[i].text = " ";
         }
 
         audioSource = receiptAudio.GetComponent<AudioSource>();
 
-        StartCoroutine(textPrint(delay));
+        StartCoroutine(textPrint(delay)); //이미지 글자 따라라락
+
+        /*if (int.Parse(totalBalance.ToString()) < 0)
+            SceneManager.LoadScene("GameOver");*/
+    }
+
+    public void setReceiptBalance()
+    {
+        prevBalance.text = num1.ToString();
+        profit.text = num2.ToString();
+        cost.text = num3.ToString();
+        totalBalance.text = (num1+num2-num3).ToString();
     }
 
     IEnumerator textPrint(float d)

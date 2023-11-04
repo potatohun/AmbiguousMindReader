@@ -41,10 +41,10 @@ public class TextManager : MonoBehaviour
 
     }
 
-   
+
     void Update()
     {
-        if(customer != null)
+        if (customer != null)
         {
             if (customer.isEnter == true && trigger == true)//
             {
@@ -189,14 +189,15 @@ public class TextManager : MonoBehaviour
     {
         QuestionTextClose();
         GameObject clickbtn = EventSystem.current.currentSelectedGameObject;
-        if(clickbtn.tag != null) { 
-            if(clickbtn.tag == "True")
+        if (clickbtn.tag != null)
+        {
+            if (clickbtn.tag == "True")
             {
                 GameManager.gamemanager.GoodEffect();
                 customerSpawner.CustomerHappy();
                 customer.isHappy = true;
             }
-            else if(clickbtn.tag == "False")
+            else if (clickbtn.tag == "False")
             {
                 GameManager.gamemanager.BadEffect();
                 customerSpawner.CustomerAngry();
