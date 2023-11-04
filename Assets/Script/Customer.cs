@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Customer : MonoBehaviour
 {
@@ -13,6 +15,7 @@ public class Customer : MonoBehaviour
     public bool isLeave;
 
     public Animator animator;
+    public Image image;
 
     private void Awake()
     {
@@ -20,6 +23,8 @@ public class Customer : MonoBehaviour
         id = 2;
         payment = Random.RandomRange(100, 1000);
         animator = GetComponent<Animator>();
+        image = GetComponent<Image>();
+
         TextManager.textmanager.trigger = true;
     }
 
@@ -28,7 +33,7 @@ public class Customer : MonoBehaviour
         if(GameManager.gamemanager.timeout == true)
         { 
             //Å¸ÀÓ¾Æ¿ô½Ã ÅðÀå(ÀÓ½Ã) ->
-            Leave();
+            //Leave();
         }
     }
 
@@ -44,7 +49,21 @@ public class Customer : MonoBehaviour
         isEnter = false;
         isLeave = true;
         animator.SetBool("Leave", true);
-        Debug.Log(payment + "¹ú¾ú´Ù!");
+        if (isHappy)
+        {
+            GameManager.gamemanager.SetEarn(2 * payment);
+            Debug.Log(2*payment + "¹ú¾ú´Ù!");
+        }
+        else if (isAngry)
+        {
+            GameManager.gamemanager.SetEarn(-1 * payment);
+            Debug.Log(payment + "ÀÒ¾ú´Ù!");
+        }
+        else
+        {
+            GameManager.gamemanager.SetEarn(payment);
+            Debug.Log(payment + "¹ú¾ú´Ù!");
+        }
     }
 
     public void Destroy()

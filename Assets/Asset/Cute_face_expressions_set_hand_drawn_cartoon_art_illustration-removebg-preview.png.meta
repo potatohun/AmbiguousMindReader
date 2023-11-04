@@ -1,0 +1,563 @@
+fileFormatVersion: 2
+guid: 8cd425c858ee44b4ab3a57029c701a89
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Cute_face_expressions_set_hand_drawn_cartoon_art_illustration-removebg-preview_0
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 316
+        width: 112
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52b762459d2def84b9d7c855019390b5
+      internalID: -1244745353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cute_face_expressions_set_hand_drawn_cartoon_art_illustration-removebg-preview_1
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 313
+        width: 112
+        height: 109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b91fb6f6697e2042b4a26ae8331eae1
+      internalID: -461873367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cute_face_expressions_set_hand_drawn_cartoon_art_illustration-removebg-preview_2
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 320
+        width: 112
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc94492309baaca4da0bb7d2bf0f47a6
+      internalID: -870921069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cute_face_expressions_set_hand_drawn_cartoon_art_illustration-removebg-preview_3
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 310
+        width: 112
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9257940e181c0345a427f9a6aa48561
+      internalID: 1859746286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cute_face_expressions_set_hand_drawn_cartoon_art_illustration-removebg-preview_4
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 146
+        width: 112
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f6c2358961b72f4e858071171b033b7
+      internalID: -2044475924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cute_face_expressions_set_hand_drawn_cartoon_art_illustration-removebg-preview_5
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 235
+        width: 112
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aa68062608e7364c9e76368d6ddbeef
+      internalID: -1926865201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cute_face_expressions_set_hand_drawn_cartoon_art_illustration-removebg-preview_6
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 228
+        width: 112
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6d5fd16298aa6f4986a558b2c849b32
+      internalID: 1542785490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cute_face_expressions_set_hand_drawn_cartoon_art_illustration-removebg-preview_7
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 230
+        width: 112
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10ab303a1ca49894299075af32774e4b
+      internalID: -588719915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cute_face_expressions_set_hand_drawn_cartoon_art_illustration-removebg-preview_8
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 233
+        width: 112
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52994f7c9ce94244fb5d291c914fdb59
+      internalID: 1423451730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cute_face_expressions_set_hand_drawn_cartoon_art_illustration-removebg-preview_10
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 147
+        width: 112
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8011de22c29de33439fae3c8ad1b7d8f
+      internalID: -764062239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cute_face_expressions_set_hand_drawn_cartoon_art_illustration-removebg-preview_11
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 147
+        width: 112
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8811bf02c7b2e34a80d927d8ab675f3
+      internalID: -1752813068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cute_face_expressions_set_hand_drawn_cartoon_art_illustration-removebg-preview_12
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 154
+        width: 112
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6b9d2a05d8cd9849a338a1f42e18d25
+      internalID: 1580942651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cute_face_expressions_set_hand_drawn_cartoon_art_illustration-removebg-preview_13
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 78
+        width: 112
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd7cfc1744bbe4248b82f164f5c932ed
+      internalID: -774028252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cute_face_expressions_set_hand_drawn_cartoon_art_illustration-removebg-preview_14
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 73
+        width: 112
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cc03e4f46ebd214a9d1a7d00b864359
+      internalID: 67357426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cute_face_expressions_set_hand_drawn_cartoon_art_illustration-removebg-preview_9
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 82
+        width: 112
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b23d04a491b44da4f9503522af88e102
+      internalID: 2034642519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cute_face_expressions_set_hand_drawn_cartoon_art_illustration-removebg-preview_15
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 73
+        width: 112
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d46128082e0188345b75f62b32860d4e
+      internalID: 2083960017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cute_face_expressions_set_hand_drawn_cartoon_art_illustration-removebg-preview_16
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 0
+        width: 112
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d46ec8555c9f3a449990c540ccb737c
+      internalID: 1774439419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cute_face_expressions_set_hand_drawn_cartoon_art_illustration-removebg-preview_17
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 0
+        width: 112
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd4d96b758a2dc3419d9a424b7441c1b
+      internalID: -1511461256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cute_face_expressions_set_hand_drawn_cartoon_art_illustration-removebg-preview_18
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 4
+        width: 112
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 558d6dfcfc5066c4e804ce72c824a9ee
+      internalID: 2008322788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cute_face_expressions_set_hand_drawn_cartoon_art_illustration-removebg-preview_19
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 0
+        width: 112
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 446a8c0970645ed4cb21b93caa04bfc0
+      internalID: -2103859771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Cute_face_expressions_set_hand_drawn_cartoon_art_illustration-removebg-preview_0: -1244745353
+      Cute_face_expressions_set_hand_drawn_cartoon_art_illustration-removebg-preview_1: -461873367
+      Cute_face_expressions_set_hand_drawn_cartoon_art_illustration-removebg-preview_10: -764062239
+      Cute_face_expressions_set_hand_drawn_cartoon_art_illustration-removebg-preview_11: -1752813068
+      Cute_face_expressions_set_hand_drawn_cartoon_art_illustration-removebg-preview_12: 1580942651
+      Cute_face_expressions_set_hand_drawn_cartoon_art_illustration-removebg-preview_13: -774028252
+      Cute_face_expressions_set_hand_drawn_cartoon_art_illustration-removebg-preview_14: 67357426
+      Cute_face_expressions_set_hand_drawn_cartoon_art_illustration-removebg-preview_15: 2083960017
+      Cute_face_expressions_set_hand_drawn_cartoon_art_illustration-removebg-preview_16: 1774439419
+      Cute_face_expressions_set_hand_drawn_cartoon_art_illustration-removebg-preview_17: -1511461256
+      Cute_face_expressions_set_hand_drawn_cartoon_art_illustration-removebg-preview_18: 2008322788
+      Cute_face_expressions_set_hand_drawn_cartoon_art_illustration-removebg-preview_19: -2103859771
+      Cute_face_expressions_set_hand_drawn_cartoon_art_illustration-removebg-preview_2: -870921069
+      Cute_face_expressions_set_hand_drawn_cartoon_art_illustration-removebg-preview_3: 1859746286
+      Cute_face_expressions_set_hand_drawn_cartoon_art_illustration-removebg-preview_4: -2044475924
+      Cute_face_expressions_set_hand_drawn_cartoon_art_illustration-removebg-preview_5: -1926865201
+      Cute_face_expressions_set_hand_drawn_cartoon_art_illustration-removebg-preview_6: 1542785490
+      Cute_face_expressions_set_hand_drawn_cartoon_art_illustration-removebg-preview_7: -588719915
+      Cute_face_expressions_set_hand_drawn_cartoon_art_illustration-removebg-preview_8: 1423451730
+      Cute_face_expressions_set_hand_drawn_cartoon_art_illustration-removebg-preview_9: 2034642519
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -38,14 +38,17 @@ public class TextManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (customer.isEnter == true && trigger == true)//
+        if(customer != null)
         {
-            StartCoroutine(QuestionTextOpen());//
-        }
+            if (customer.isEnter == true && trigger == true)//
+            {
+                StartCoroutine(QuestionTextOpen());//
+            }
 
-        if (customer.isLeave == true)
-        {
-            QuestionTextClose();
+            if (customer.isLeave == true)
+            {
+                QuestionTextClose();
+            }
         }
     }
 
