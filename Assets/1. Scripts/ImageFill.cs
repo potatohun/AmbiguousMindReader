@@ -12,13 +12,17 @@ public class ImageFill : MonoBehaviour
     // (+) 코드추가
     [SerializeField]
     GameObject sign;
+    [SerializeField]
+    GameObject fade;
     private Animator animator;
+    private Animator fadeAnimator;
 
     // Start is called before the first frame update
     void Start()
     {
         image = GetComponent<Image>();
         animator = sign.GetComponent<Animator>();
+        fadeAnimator = fade.GetComponent<Animator>();
         StartCoroutine(fillLeftToRight(delayFirst, delay));
     }
 
@@ -43,6 +47,7 @@ public class ImageFill : MonoBehaviour
         if(image.fillAmount > 0.9 && this.transform.name == "barcode")
         {
             animator.SetFloat("FillValue", 1.0f);
+            fadeAnimator.SetFloat("FillValue", 1.0f);
         }
     }
 }

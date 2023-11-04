@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager gamemanager;
     public CustomerSpawner customerspawner;
+    public BackMusic backMusic;
+    public BtnMusic btnMusic;
     public Text timer_text;
     public Text earn_text;
 
@@ -68,8 +70,8 @@ public class GameManager : MonoBehaviour
 
         if (rage_day)
         {//레이지 데이
-            Time.timeScale = 2f;
-            background.color = new Color(255, 0, 0, 255);
+            Time.timeScale = 1.5f;
+            background.color = new Color(150, 0, 0, 255);
         }
         else
         {//평시
@@ -77,6 +79,7 @@ public class GameManager : MonoBehaviour
             background.color = new Color(255, 255, 255, 255);
         }
 
+        backMusic.SetMusic(rage_day);
         //아이템 사용여부 변경
         time_item_use = System.Convert.ToBoolean(PlayerPrefs.GetInt("조명"));
         customer_item_use = System.Convert.ToBoolean(PlayerPrefs.GetInt("의자"));
@@ -93,7 +96,7 @@ public class GameManager : MonoBehaviour
         }
         if (power_item_use)
         {
-            //독심술 레벨업
+            TextManager.textmanager.hole -= 2;
         }
     }
 

@@ -9,6 +9,9 @@ public class StartManager : MonoBehaviour
     public void NewStartBtn()
     {
         PlayerPrefs.SetInt("Day", 1);
+        PlayerPrefs.SetInt("PrevBalance", 0);
+        PlayerPrefs.SetInt("Profit", 0);
+        PlayerPrefs.SetInt("Earn", 0);
         SceneManager.LoadScene("MainGame");
     }
     public void ContinueBtn()

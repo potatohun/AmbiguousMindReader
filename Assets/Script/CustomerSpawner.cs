@@ -48,6 +48,7 @@ public class CustomerSpawner : MonoBehaviour
     public void CustomerAngry()
     {
         face.sprite = angry_facelist[Random.Range(0, angry_facelist.Length)];
+        customer.text.text = "XXXXX";
     }
 
     public void CustomerVeryangry()

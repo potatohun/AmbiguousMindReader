@@ -196,12 +196,14 @@ public class TextManager : MonoBehaviour
             if (clickbtn.tag == "True")
             {
                 GameManager.gamemanager.GoodEffect();
+                GameManager.gamemanager.btnMusic.btnMusic("True");
                 customerSpawner.CustomerHappy();
                 customer.isHappy = true;
             }
             else if (clickbtn.tag == "False")
             {
                 GameManager.gamemanager.BadEffect();
+                GameManager.gamemanager.btnMusic.btnMusic("False");
                 customerSpawner.CustomerAngry();
                 customer.isAngry = true;
             }

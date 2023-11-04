@@ -21,7 +21,7 @@ public class ReceiptText : MonoBehaviour
     int num1;
     int num2;
     public int num3;
-    int num4;
+    public int num4;
 
     // Start is called before the first frame update
     void Start()
@@ -44,8 +44,7 @@ public class ReceiptText : MonoBehaviour
 
         StartCoroutine(textPrint(delay)); //이미지 글자 따라라락
 
-        /*if (int.Parse(totalBalance.ToString()) < 0)
-            SceneManager.LoadScene("GameOver");*/
+        
     }
 
     public void setReceiptBalance()
@@ -78,5 +77,16 @@ public class ReceiptText : MonoBehaviour
             i++;
         }
 
+        if (num4 < 0)
+        {
+            Invoke("loadGameOverScene", 2.5f);
+            
+        }
+
+    }
+
+    void loadGameOverScene()
+    {
+        SceneManager.LoadScene("GameOver");
     }
 }

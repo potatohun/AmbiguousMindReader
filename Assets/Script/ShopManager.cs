@@ -42,7 +42,6 @@ public class ShopManager : MonoBehaviour
         audioSource = buySound.GetComponent<AudioSource>();
         textaudio = textSound.GetComponent<AudioSource>();
     }
-
     public void OnButtonClicked(int price)
     {
         receiptText.num3 += price;
@@ -50,12 +49,13 @@ public class ShopManager : MonoBehaviour
         Debug.Log("Button Click");
         string textContent = _text.text;
         Debug.Log("Text ³»¿ë: " + textContent);
-        if (balance < price)
+        if (receiptText.num4 < price)
         {
             Debug.Log("Purchase Failed");
             return;
         }
-        int extra = balance - price;
+        int extra = receiptText.num4 - price;
+        receiptText.num4 = extra;
 
         Debug.Log("Extra : " + extra);
 

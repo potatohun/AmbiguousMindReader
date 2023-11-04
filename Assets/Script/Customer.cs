@@ -18,6 +18,7 @@ public class Customer : MonoBehaviour
 
     public Animator animator;
     public Image image;
+    public Text text;
 
     private void Awake()
     {
@@ -29,6 +30,7 @@ public class Customer : MonoBehaviour
         animator.SetInteger("EnterType", Random.RandomRange(0, 4));
         Debug.Log(animator.GetInteger("EnterType"));
         TextManager.textmanager.trigger = true;
+        text.text = payment.ToString();
     }
 
     private void Update()
@@ -54,9 +56,9 @@ public class Customer : MonoBehaviour
         animator.SetBool("Leave", true);
         if (isHappy)
         {
-            GameManager.gamemanager.SetEarn(2 * payment);
-            Debug.Log(2*payment + "¹ú¾ú´Ù!");
-            GameManager.gamemanager.AddProfit(2 * payment);
+            GameManager.gamemanager.SetEarn(payment);
+            Debug.Log(payment + "¹ú¾ú´Ù!");
+            GameManager.gamemanager.AddProfit(payment);
         }
         else if (isAngry)
         {
@@ -80,9 +82,12 @@ public class Customer : MonoBehaviour
 
     public void TimeOut()
     {
-        GameManager.gamemanager.BadEffect();
-        GameManager.gamemanager.customerspawner.CustomerAngry();
-        isAngry = true;
-        Leave();
+        if (!isLeave)
+        {
+            GameManager.gamemanager.BadEffect();
+            GameManager.gamemanager.customerspawner.CustomerAngry();
+            isAngry = true;
+            Leave();
+        }
     }
 }
