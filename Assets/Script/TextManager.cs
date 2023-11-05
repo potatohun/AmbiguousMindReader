@@ -22,6 +22,7 @@ public class TextManager : MonoBehaviour
     public Right right;
     public string leftText = null;
     public string rightText = null;
+    public string byeText = null;
     private float delay = 0.05f;
     public int hole = 3;
     void Awake()
@@ -57,6 +58,9 @@ public class TextManager : MonoBehaviour
             {
                 QuestionTextClose();
                 AnswerTextClose();
+
+                if (customer.isAngry)
+                    StartCoroutine(ByePrint());
             }
         }
     }
@@ -68,7 +72,19 @@ public class TextManager : MonoBehaviour
         yield return null;
 
         StartCoroutine(LeftTextPrint(delay));
-        yield return new WaitForSeconds(10);
+        //  yield return new WaitForSeconds(10);
+
+    }
+
+    IEnumerator ByePrint()
+    {
+        byeText = left.GetScr(-1);
+
+        text.SetActive(true);
+        text.GetComponent<Text>().text = byeText;
+        yield return new WaitForSeconds(1.5f);
+        text.GetComponent<Text>().text = "";
+
 
     }
     IEnumerator LeftTextPrint(float d)
@@ -114,7 +130,8 @@ public class TextManager : MonoBehaviour
         }
 
         right.SetDingdangdong()
-; ;    }
+; ;
+    }
 
     void TransString(string text)
     {
@@ -156,6 +173,9 @@ public class TextManager : MonoBehaviour
 
     public void QuestionTextClose()
     {
+
+
+
         text.SetActive(false);
         text.GetComponent<Text>().text = "";
     }

@@ -41,7 +41,7 @@ public class CustomerSpawner : MonoBehaviour
         customer = GameObject.FindWithTag("Customer").GetComponent<Customer>();
         face = GameObject.FindWithTag("Face").GetComponent<Image>();
         face.sprite = normal_facelist[Random.Range(0, normal_facelist.Length)];
-        customer.id = Random.Range(1, 4);
+        customer.id = Random.Range(1, 12);
         TextManager.textmanager.FindCustomer(customer);
     }
 

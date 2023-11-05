@@ -24,7 +24,17 @@ public class Customer : MonoBehaviour
     {
         Debug.Log("생성");
         id = 2;
-        payment = Random.RandomRange(100, 1001);
+        if (PlayerPrefs.GetInt("잡지") == 1)
+        {
+            //잡지 아이템 사용 O
+            payment = Random.RandomRange(200,2001);
+        }
+        else
+        {
+            //잡지 아이템 사용 X
+            payment = Random.RandomRange(100, 1001);
+        }
+        
         animator = GetComponent<Animator>();
         image = GetComponent<Image>();
         animator.SetInteger("EnterType", Random.RandomRange(0, 4));
@@ -46,7 +56,17 @@ public class Customer : MonoBehaviour
         //손님 입장
         isEnter = true;
         isLeave = false;
-        Invoke("TimeOut", 5.0f);
+
+        float waittime = 7.0f;
+        if (PlayerPrefs.GetInt("시계") == 1)
+        {
+            waittime = 10.0f;
+        }
+        else
+        {
+            waittime = 7.0f;
+        }
+        Invoke("TimeOut", waittime);
     }
     public void Leave()
     {

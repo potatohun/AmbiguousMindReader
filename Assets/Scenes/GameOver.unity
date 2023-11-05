@@ -502,7 +502,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uD30C\uC0B0\uD558\uACE0\uC57C \uB9D0\uC558\uB2E4..."
+  m_Text: 
 --- !u!222 &1159616045
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -627,6 +627,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d24eab8a3a472e741ae963628a23e1ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 1159616044}
+  btn: {fileID: 2136178567}
+  str: "\uD30C\uC0B0\uD558\uACE0\uC57C \uB9D0\uC558\uB2E4..."
 --- !u!1 &2136178567
 GameObject:
   m_ObjectHideFlags: 0
@@ -645,7 +648,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2136178568
 RectTransform:
   m_ObjectHideFlags: 0

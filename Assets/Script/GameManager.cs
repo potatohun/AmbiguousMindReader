@@ -36,6 +36,8 @@ public class GameManager : MonoBehaviour
     public bool time_item_use;
     public bool customer_item_use;
     public bool power_item_use;
+    public bool money_item_use;
+    public bool wait_item_use;
     void Awake()
     {
         if (gamemanager == null)
@@ -96,7 +98,8 @@ public class GameManager : MonoBehaviour
         }
         if (power_item_use)
         {
-            TextManager.textmanager.hole -= 2;
+            //독심술 증가
+            TextManager.textmanager.hole = 2;
         }
     }
 
@@ -186,7 +189,7 @@ public class GameManager : MonoBehaviour
 
     public void Time_itemuse()
     {
-        time *= 2;
+        
     }
 
     public void Customer_itemuse()

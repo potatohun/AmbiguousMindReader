@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class ShopManager : MonoBehaviour
 {
     // string[] tempList = new string[] { "Sofa", "Light", "Table" ,"Lamp", "Chair", "Cabinet", "Flower"};
-    List<string> shopList = new List<string>() { "조명", "의자", "독심술 서적" };
+    List<string> shopList = new List<string>() { "조명", "의자", "독심술 서적", "잡지", "시계" };
     List<string> itemList = new List<string>();
     [SerializeField]
     Text _text;
@@ -23,6 +23,8 @@ public class ShopManager : MonoBehaviour
     Text cost;
     [SerializeField]
     Text total;
+    [SerializeField]
+    GameObject warn;
 
     private int balance;
     private AudioSource audioSource;
@@ -34,6 +36,7 @@ public class ShopManager : MonoBehaviour
 
     void Start()
     {
+        warn.SetActive(false);
         balance = PlayerPrefs.GetInt("Earn");
         for (int i = 0; i < shopList.Count; i++)
         {
@@ -52,6 +55,7 @@ public class ShopManager : MonoBehaviour
         if (receiptText.num4 < price)
         {
             Debug.Log("Purchase Failed");
+            NotifyWarn();
             return;
         }
         int extra = receiptText.num4 - price;
@@ -80,10 +84,17 @@ public class ShopManager : MonoBehaviour
         int num = PlayerPrefs.GetInt("조명");
         int num1 = PlayerPrefs.GetInt("의자");
         int num2 = PlayerPrefs.GetInt("독심술 서적");
+        int num3 = PlayerPrefs.GetInt("잡지");
+        int num4 = PlayerPrefs.GetInt("시계");
 
-        Debug.Log($"{num}, {num1}, {num2}");
+        Debug.Log($"{num}, {num1}, {num2}, {num3}, {num4}");
 
         panel.SetActive(true);
+    }
+
+    public void NotifyWarn()
+    {
+        warn.SetActive(true);
     }
 
     public void ReceiptUpdate()
